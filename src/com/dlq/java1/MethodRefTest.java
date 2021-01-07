@@ -92,6 +92,15 @@ public class MethodRefTest {
 	// String中的		int t1.compareTo(t2)
 	@Test
 	public void test5() {
+		Comparator<String> com = new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+				return s1.compareTo(s2);
+			}
+		};
+		System.out.println(com.compare("abc", "abd"));
+		System.out.println("******************************************");
+
 		Comparator<String> com1 = (s1,s2) -> s1.compareTo(s2);
 		System.out.println(com1.compare("abc", "abd"));
 
@@ -105,6 +114,15 @@ public class MethodRefTest {
 	//String中的boolean t1.equals(t2)
 	@Test
 	public void test6() {
+		BiPredicate<String,String> pre = new BiPredicate<String, String>() {
+			@Override
+			public boolean test(String t1, String t2) {
+				return t1.equals(t2);
+			}
+		};
+		System.out.println(pre.test("add", "add"));
+		System.out.println("******************************************");
+
 		BiPredicate<String,String> pre1 = (t1,t2) -> t1.equals(t2);
 		System.out.println(pre1.test("add", "add"));
 

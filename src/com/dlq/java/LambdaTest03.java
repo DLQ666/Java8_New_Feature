@@ -54,7 +54,7 @@ public class LambdaTest03 {
         System.out.println("**********************************************************");
 
         List<String> filterString1 =filterString(list,s ->  s.contains("京"));
-        System.out.println("我是Lambda表达式写法："+filterString);
+        System.out.println("我是Lambda表达式写法："+filterString1);
 
     }
     //根据给定的规则，过滤集合中的字符串。此规则由Predicate的方法决定
